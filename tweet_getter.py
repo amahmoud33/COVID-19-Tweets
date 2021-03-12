@@ -1,23 +1,63 @@
+import re
+import io
+import csv
 import tweepy
+import json
+from time import time
 
-# TODO: Add keys when DEV account is verified
-# TODO: Keys should not be pushed to repo - add it to a config file that is hidden
-consumer_key = "wXXXXXXXXXXXXXXXXXXXXXXX1"
-consumer_secret = "qXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXh"
-access_token = "9XXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXi"
-access_token_secret = "kXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXT"
+keywords = ["covid+vaccination",
+            "covid+vaccine",
+            "covid-19+vaccine",
+            "vaccine+for+covid",
+            "pfizer+vaccine",
+            "pfizer+covid",
+            "johnson+and+johnson+covid",
+            "johnson+and+johnson+vaccine",
+            "moderna+vaccine",
+            "moderna+covid",
+            "astrazeneca+vaccine"
+            "astrazeneca+covid",
+            "sputnik+vaccine",
+            "sputnik+covid",
+            "china+vaccine",
+            "vaccine+sick",
+            "vaccine+trust",
+            "vaccine+allergy",
+            "covid-19+vaccination",
+            "vaccination+for+covid",
+            "vaccination+sick",
+            "vaccination+trust",
+            "vaccination+allergy"]
+
+lang_en = "en"
+
+def query_covid_keywords(queries, language = "en", count = 200):
+    raw_tweets = []
+
+    # Make the API call for the tweet queries
+    for query in queries:
+        raw_tweets = raw_tweets + api.search(query, lang = language, count = count)
+    
+    print("Successfully gathered " + str(len(raw_tweets)) + " tweets.")
+
+    # Collect the JSON response from each tweet
+    with open("covid-19_vaccine_tweets_%s.json" % time(), "w") as f:
+        tweets = []
+        for raw_tweet in raw_tweets:
+            tweets.append(raw_tweet._json)
+        # Dumping the JSON from the tweets
+        json.dump(tweets, f)
+
+consumer_key = "5sUuodfKK15kvN9YnrgRHFDig"
+consumer_secret = "VJbgOoHKtWqZHtdm1HFyTuWT2COtXcwUUupWXqoGFiRR2FomH8"
+access_token = "1354911049829519363-3sh4dJ0JhyCzgUTREZlciDeXzGE1eF"
+access_token_secret = "cBhNYPxRhX1JdS8EtqpbbdLoMClJrgSD3y06vevqzz0hx"
 
 # Creating the authentication object
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-# Setting your access token and secret
+# Setting access token and secret
 auth.set_access_token(access_token, access_token_secret)
 # Creating the API object while passing in auth information
 api = tweepy.API(auth)
 
-# TODO: Create multiple queries to find various relevant tweets
-# TODO: Add GEOLOCATION to the queries to find tweets based on different locations
-query = "COVID-19+vaccine"
-language = "en"
-
-# Calling the user_timeline function with our parameters
-tweets = api.search(q=query, lang=language)
+query_covid_keywords(keywords, lang_en, 10000)
