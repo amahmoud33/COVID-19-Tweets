@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
 import re
 import io
 import csv
 import tweepy
 import json
-from time import time
+from datetime import datetime
 
 keywords = ["covid+vaccination",
             "covid+vaccine",
@@ -41,7 +42,7 @@ def query_covid_keywords(queries, language = "en", count = 200):
     print("Successfully gathered " + str(len(raw_tweets)) + " tweets.")
 
     # Collect the JSON response from each tweet
-    with open("covid-19_vaccine_tweets_%s.json" % time(), "w") as f:
+    with open("covid-19_vaccine_tweets_%s.json" % datetime.now().strftime("%d-%m-%Y_%H-%M-%S"), "w") as f:
         tweets = []
         for raw_tweet in raw_tweets:
             tweets.append(raw_tweet._json)
