@@ -1,0 +1,36 @@
+All Vader statistics:
+Average All Negative Score: 0.09423452593480228
+Average All Neutral Score: 0.775653493433763
+Average All Positive Score: 0.12585925998385952
+Overall All Sentiment: Positive
+
+AstraZeneca Vader statistics:
+Average AstraZeneca Negative Score: 0.0877564175698802
+Average AstraZeneca Neutral Score: 0.7984883057615516
+Average AstraZeneca Positive Score: 0.11375584711922418
+Overall AstraZeneca Sentiment: Neutral
+
+Pfizer Vader statistics:
+Average Pfizer Negative Score: 0.06614504547630445
+Average Pfizer Neutral Score: 0.8271483963618956
+Average Pfizer Positive Score: 0.1067079942556247
+Overall Pfizer Sentiment: Positive
+
+Johnson and Johnson Vader statistics:
+Average Johnson and Johnson Negative Score: 0.10124747474747474
+Average Johnson and Johnson Neutral Score: 0.7727070707070706
+Average Johnson and Johnson Positive Score: 0.12605050505050505
+Overall Johnson and Johnson Sentiment: Neutral
+
+Moderna Vader statistics:
+Average Moderna Negative Score: 0.050460095211425374
+Average Moderna Neutral Score: 0.8515021002520302
+Average Moderna Positive Score: 0.09803500420050405
+Overall Moderna Sentiment: Positive
+
+Sputnik Vader statistics:
+Average Sputnik Negative Score: 0.06899708576186511
+Average Sputnik Neutral Score: 0.8264450457951706
+Average Sputnik Positive Score: 0.10456203164029974
+Overall Sputnik Sentiment: Positive
+

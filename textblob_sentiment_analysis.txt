@@ -1,0 +1,30 @@
+All Textblob statistics:
+Average All Sentiment Score: 0.04368252129744108
+Average All Subjectivity: 0.31411759183339816
+Overall All Sentiment: Positive
+
+AstraZeneca Textblob statistics:
+Average AstraZeneca Sentiment Score: 0.06579030824502873
+Average AstraZeneca Subjectivity: 0.26557579336743625
+Overall AstraZeneca Sentiment: Positive
+
+Pfizer Textblob statistics:
+Average Pfizer Sentiment Score: 0.09335117729743878
+Average Pfizer Subjectivity: 0.2857839198138085
+Overall Pfizer Sentiment: Positive
+
+Johnson and Johnson Textblob statistics:
+Average Johnson and Johnson Sentiment Score: 0.06740035182270031
+Average Johnson and Johnson Subjectivity: 0.29039529494074945
+Overall Johnson and Johnson Sentiment: Positive
+
+Moderna Textblob statistics:
+Average Moderna Sentiment Score: 0.09816643700923026
+Average Moderna Subjectivity: 0.28588941864424927
+Overall Moderna Sentiment: Positive
+
+Sputnik Textblob statistics:
+Average Sputnik Sentiment Score: 0.06907223024483286
+Average Sputnik Subjectivity: 0.2608313000449761
+Overall Sputnik Sentiment: Positive
+
