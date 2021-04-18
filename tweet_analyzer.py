@@ -167,6 +167,7 @@ def print_vader_stats(stats_file, df, vaccine_name):
     stats_file.write("Average {} Negative Score: {}\n".format(vaccine_name, avg_neg))
     stats_file.write("Average {} Neutral Score: {}\n".format(vaccine_name, avg_neut))
     stats_file.write("Average {} Positive Score: {}\n".format(vaccine_name, avg_pos))
+    stats_file.write("Average {} Compound Score: {}\n".format(vaccine_name, avg_score))
     if avg_score >= 0.05 :
         ovr_sent = "Positive"
     elif avg_score <= -0.05 :
